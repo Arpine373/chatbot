@@ -20,29 +20,44 @@ def  avelacnelDzi(dzier):
     print('Type name,   you  can  use this names ')
     printNames(dzier)
     name = input()
+    print('high')
     high = int(input())
+    print('speed')
     speed = int(input())
     dzi = Horse(name, high, speed)
     dzier.append(dzi)
 
-dzier=[]
-dzi = Horse('Grom', 180, 33)
-dzier.append(dzi)
-dzi2=Horse('Sky',200,150)
-dzier.append(dzi2)
-dzi3=Horse('Miraj', 180,140)
-dzier.append(dzi3)
+def hanelDzi(dzier):
+    print('Type name,   you  can  use this names ')
+    printNames(dzier)
+    name1 = input()
+    print('high')
+    high1 = int(input())
+    print('speed')
+    speed1 = int(input())
+    for  name  in  dzier:
+        if name==name1:
+            dzier.pop(name)
+    print(dzier)
 
-def  printNames(dizer):
+def  printNames(dzier):
     for  dzi  in  dzier:
         print(dzi.name)
 
+def  yntrelGorzoxutyun(dzier):
+    while True:
+        print('1-avelacneldzi,2-printMaxSpeed,3-hanelDzi,4-printNames')
+        a = int(input())
+        if a == 1:
+            avelacnelDzi(dzier)
+        elif a==2:
+            printMaxSpeed(dzier)
+        elif a==3:
+            hanelDzi(dzier)
+        elif  a==4:
+            printNames(dzier)
+        else:
+            print('please  do  input  another  one')
 
-dzier[0].printName()
-dzier[1].increaseHigh(100)
-print(dzier[1].high)
-
-avelacnelDzi(dzier)
-avelacnelDzi(dzier)
-
-printMaxSpeed(dzier)
+dzier=[]
+yntrelGorzoxutyun(dzier)
