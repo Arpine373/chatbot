@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+fig=plt.figure()
+ax1=fig.add_subplot(131)
+ax2=fig.add_subplot(132)
+ax3=fig.add_subplot(133)
+ax1.plot([1,2],[3,4], color='lightpink',label='grafik1')
+ax2.plot([2,3],[6,7], color='lightblue',label='grafik2')
+ax3.plot([4,7],[2,5], color='lightpink',label='grafik3')
+plt.show()
+plt.savefig('one.png')
