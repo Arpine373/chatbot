@@ -1,0 +1,37 @@
+import pandas
+​matrica=[[1,2,2,4],[3,4,2,2],[2,5,4,5]]
+print(matrica)
+dataframe=pandas.DataFrame(matrica)
+print(dataframe)
+matrica2={"syun1":[1,2,3],"syun2":[4,5,6]}
+print(matrica2)
+dataframe2=pandas.DataFrame(matrica2)
+print(dataframe2)
+indexes=['Arpi','Elia','Lusi']
+dataframe3=pandas.DataFrame(matrica2,index=indexes)
+print(dataframe3)
+dataframe4=pandas.read_csv("na.csv")
+print(dataframe4)
+url="http://s3.amazonaws.com/assets.datacamp.com/course/Kaggle/train.csv"
+dataframe5=pandas.read_csv(url)
+print(dataframe5)
+print(dataframe5.head())
+print(dataframe5['Survived'])
+print(dataframe5.loc[890])
+print(dataframe5.iloc[0])
+print(dataframe5.iloc[0,3])
+print(dataframe5.columns.values)
+print(dataframe5.index.values)
+print(dataframe5.shape)
+dataframe6=dataframe5.drop('Survived',axis=1)
+print(dataframe6.columns.values)
+print(dataframe2.sum())
+print(dataframe6.describe())
+print(dataframe6.info())
+print(dataframe6.isna())
+print(dataframe6.isna().sum())
+dataframe6.fillna(dataframe6.mean(),inplace=True)
+print(dataframe6.isna().sum())
+import matplotlib.pyplot as plt
+dataframe5.plot()
+plt.show()
